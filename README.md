@@ -16,7 +16,7 @@ todo rest API with django. for ACM ascendo @20201
 *<a href="https://www.django-rest-framework.org/#installation">DRF installation and setting up </a>
 * <a href="https://djangocentral.com/visual-studio-code-setup-for-django-developers/">Configuring vs code</a>
 * <a href="https://www.postman.com/downloads/"> Postman </a>
-* <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn"> Postgres </a>
+* <a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04"> Postgres </a>
 
 ### Documentations
 
