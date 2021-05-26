@@ -1,5 +1,4 @@
-from django.urls import path,include
-from .views import test
+from django.urls import path
 from .views import todo_detail,todo_list
 urlpatterns = [
     path('', todo_list, name="create_retrive"),

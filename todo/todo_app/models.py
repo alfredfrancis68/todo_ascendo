@@ -5,10 +5,10 @@ class TodoManager(models.Manager):
 
 class Todo(models.Model):
     IMP = (
-        ("Very high",0),
-        ("high",1),
-        ("Normal",2),
-        ("Least ",3),
+        (0,"Very high"),
+        (1,"high"),
+        (2,"Normal"),
+        (3,"Least "),
 
     )
     title = models.CharField(max_length=100)
