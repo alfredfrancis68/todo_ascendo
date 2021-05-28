@@ -1,8 +1,8 @@
-# Django Rest API
 
-todo rest API with django. for ACM ascendo @20201
 
-## BASICS
+todo rest API with django. for ACM ascendo @2021<br>
+<a href="https://notes-workshop.stackblitz.io/">Final product</a>
+## Basics
 
 * An API is an application programming interface. It is a set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.
 * REST determines how the API looks like. It stands for “Representational State Transfer”. It is a set of rules that developers follow when they create their API. One of these rules states that you should be able to get a piece of data (called a resource) when you link to a specific URL.
@@ -10,21 +10,16 @@ todo rest API with django. for ACM ascendo @20201
 * Django REST framework is a powerful and flexible toolkit for building Web APIs. ... The Web browsable API is a huge usability win for your developers. Authentication policies including packages for OAuth1a and OAuth2. Serialization that supports both ORM and non-ORM data sources.
 ## Getting Started
 
-### Installation
 
-* <a href="https://docs.djangoproject.com/en/1.8/howto/windows/#:~:text=Django%20can%20be%20installed%20easily,version%20in%20the%20command%20prompt.">Django Installation</a>
-* <a href="https://www.django-rest-framework.org/#installation">DRF installation and setting up </a>
-* <a href="https://djangocentral.com/visual-studio-code-setup-for-django-developers/">Configuring vs code</a>
-* <a href="https://www.postman.com/downloads/"> Postman </a>
-* <a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04"> Postgres </a>
-* <a href="https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html"> Heroku </a>
+
+
 
 ### Documentations
 
-* <a href="https://djoser.readthedocs.io/en/latest/authentication_backends.html"> DJOSER </a>
 * <a href="https://docs.djangoproject.com/en/3.2/"> Django </a>
 * <a href="https://www.django-rest-framework.org/"> DRF </a>
 * <a href="https://www.postgresql.org/docs/">Postgres</a>
+* <a href="https://djoser.readthedocs.io/en/latest/authentication_backends.html"> DJOSER </a>
 
 ### Starting
 
@@ -34,7 +29,20 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
-## Configuring project for deploying in heroku
+# A simple rest api with DRF
+
+## step1 : installation
+
+* <a href="https://docs.djangoproject.com/en/1.8/howto/windows/#:~:text=Django%20can%20be%20installed%20easily,version%20in%20the%20command%20prompt.">Django Installation</a>
+* <a href="https://www.django-rest-framework.org/#installation">DRF installation and setting up </a>
+* <a href="https://djangocentral.com/visual-studio-code-setup-for-django-developers/">Configuring vs code</a>
+* <a href="https://www.postman.com/downloads/"> Postman </a>
+* <a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04"> Postgres </a>
+* <a href="https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html"> Heroku </a>
+
+#### <a href="https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html">cookie cutter django</a>
+
+### Configuring project for deploying in heroku
 
 - create a free heroku account,<a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install"> download and install heroku cli</a>
 ```bash
