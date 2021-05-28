@@ -34,8 +34,107 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
+## Configuring project for deploying in heroku
+
+- create a free heroku account,<a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install"> download and install heroku cli</a>
+```bash
+sudo snap install --classic heroku
+```
+- install wsgi server, whitenoise for static file managing. psycopg2 for postgres
+
+```
+pip install django gunicorn whitenoise dj-database-url psycopg2
+```
+<br>
 
 
+<i>requirements.txt</i>
+```
+Django==3.2.3
+djangorestframework==3.12.4
+psycopg2==2.8.6
+pytz==2021.1
+dj-database-url==0.5.0
+gunicorn==20.1.0
+```
+
+- Add Procfile 
+
+```
+web: gunicorn <nameOfProject>.wsgi --log-file -
+```
+- add .gitignore
+
+```
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+venv/
+```
+
+- initialize git
+
+- login to heroku
+```
+heroku login
+```
+- change settings.py
+
+```
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',            'nameofapp.herokuapp.com']
+
+DEBUG = False # use heroku logs for getting logs
+
+
+```
+- set secret key as env variable
+
+```
+SECRET_KEY = os.environ.get('SECRET_KEY')
+heroku config:set SECRET_KEY=secretkey
+```
+- statics
+```
+whitenoise.runserver_nostatic #apps
+whitenoise #requirements.txt
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+'whitenoise.middleware.WhiteNoiseMiddleware',  #middleware
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')
+]
+
+- configure database
+```
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+```
+- media
+```
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+```
+- git commit
+
+- add postgres addon
+```
+heroku addons:create heroku-postgresql:hobby-dev
+heroku config -s | grep DATABASE_URL
+```
+
+- disable collect static
+```
+heroku config:set DISABLE_COLLECTSTATIC=1
+git push heroku master
+```
+- run bash
+```
+heroku open
+heroku run bash
+```
 ## For queries
 
 contact
