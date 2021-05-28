@@ -41,7 +41,7 @@ python manage.py runserver
 * <a href="https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html"> Heroku </a>
 
 #### <a href="https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html">cookie cutter django</a>
-
+### <a href="https://www.geeksforgeeks.org/how-to-enable-cors-headers-in-your-django-project/">Enabling cross origin sharing</a>
 ### Configuring project for deploying in heroku
 
 - create a free heroku account,<a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install"> download and install heroku cli</a>
